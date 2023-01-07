@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "list.h"
 
-*/sort_list.list.h
+*/ sort_list.list.h
 typedef struct s_list t_list;
 
 struct s_list
