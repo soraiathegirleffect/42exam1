@@ -7,7 +7,7 @@ int main(int ac, char **av)
     int end;
     int flag;
 
-    if (argc > 1)
+    if (ac > 1)
     {
         i = 0;
         while (av[1][i] == ' ' || av[1][i] == '\t')
