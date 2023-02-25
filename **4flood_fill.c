@@ -9,7 +9,8 @@ void  ffill(char **tab, t_point size, char target, int row, int col)
 {
 	if (row < 0 || col < 0 || row >= size.y || col >= size.x || tab[row][col] != target)
 		return;
-	/*begin.y=row, begin.x=col; The function won't fill diagonally, not negative, not less than size*/
+	/*begin.y=row, begin.x=col; The function won't fill diagonally, not negative, not less than size
+	the limiter of the zone tab[row][col]: "delimitated horizontally and vertically by other characters*/
 
 	tab[row][col] = 'F';
 	ffill(tab, size, target, row - 1, col);
