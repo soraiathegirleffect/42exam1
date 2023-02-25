@@ -1,21 +1,16 @@
-#include <unistd.h>
-#include <stdio.h>
+
 #include <string.h>
-// include for size_t
-// #include <stdlib.h>
 
-size_t  ft_strcspn(const char *s, const char *reject)
+size_t ft_strcspn(const char *s, const char *reject)
 {
-	size_t	i;
-	size_t	k;
+	size_t i = 0;
+	size_t k = 0;
 
-	i = 0;
-	k = 0;
-	while (s[i] != '\0')
+	while(s[i])
 	{
-		while (reject[k] != '\0')
+		while (reject[k])
 		{
-			if (reject[k] == s[i])
+			if (reject [k] == s[i])
 				return (i);
 			k++;
 		}
@@ -24,6 +19,14 @@ size_t  ft_strcspn(const char *s, const char *reject)
 	}
 	return (i);
 }
+
+
+
+
+//string.h for size_t
+//The strcspn() function calculates the length of the initial segment  of s which consists entirely of bytes not in reject.
+//The strcspn() function returns the number of bytes in the initial segment of s which are not in the string reject.
+
 
 // int	main(void)
 // {
