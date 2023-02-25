@@ -1,5 +1,45 @@
 #include <unistd.h>
 
+int ft_atoi(char *str)
+{
+	int n = 0;
+
+	while (*str)
+	{
+		n = n * 10 + *str - 48;
+		str++;
+	}
+	return(n);
+}
+
+void printhex(int n)
+{
+	char hex[] = "0123456789abcdef";
+
+	if (n >= 16)
+		printhex(n / 16);
+	write(1, &hex[n % 16], 1);
+}
+
+int main (int ac, char **av)
+{
+	if(ac == 2)
+		printhex(ft_atoi(av[1]));
+	
+	write(1, "\n", 1);
+}
+
+
+
+
+
+
+
+//orrrr
+
+
+#include <unistd.h>
+
 int		ft_atoi(char *str)
 {
 	int n = 0;
