@@ -39,6 +39,16 @@ char *ft_itoa(int nbr)
     return result;
 }
 
+
+
+
+
+
+
+
+
+
+
 //or mine
 
 static int	number_digit(int nn)
