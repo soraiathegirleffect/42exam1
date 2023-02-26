@@ -1,5 +1,44 @@
 #include <unistd.h>
 
+int main(int ac, char **av)
+{
+	int i;
+	int b;
+	int check;
+
+	i = 0;
+	b = 0;
+	check = 0;
+	if (ac == 3)
+	{
+		while (av[1][i])
+		{
+			while (av[2][b])
+			{
+				if (av[1][i] == av[2][b])
+				{
+					check++;
+					break;
+				}
+				b++;
+			}
+			i++;
+		}
+		if (check == i)
+		{
+			write (1, "1", 1);
+		}
+		else
+			write (1, "0", 1);
+	}
+	write (1, "\n", 1);
+}
+
+////orrrr
+
+
+#include <unistd.h>
+
 void	hidenp(char *probe, char *target)
 {
 	while (*probe != '\0')
