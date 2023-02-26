@@ -12,11 +12,14 @@ int		ft_atoi(char *str)
 	return (n);
 }
 
+
 void	ft_putnbr(int n)
 {
+	char = c;
+	
 	if (n >= 10)
 		ft_putnbr(n / 10);
-	char c = (n % 10) + '0';
+	c = (n % 10) + 48;
 	write(1, &c, 1);
 }
 
@@ -41,8 +44,8 @@ int		add_prime_sum(int n)
 	while (i <= n)
 	{
 		if (is_prime(i) == 1)
-			sum += i;
-		++i;
+			sum = sum + i;
+		i++;
 	}
 	return (sum);
 }
@@ -62,6 +65,7 @@ int		main(int ac, char **av)
 
 /*Write a program that takes a positive integer as argument and displays the sum
 of all prime numbers inferior or equal to it followed by a newline.
+
 If the number of arguments is not 1, or the argument is not a positive number,
 just display 0 followed by a newline.
 Yes, the examples are right.
