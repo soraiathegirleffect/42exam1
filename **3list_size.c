@@ -19,17 +19,6 @@ typedef struct s_list
 
 int	ft_list_size(t_list *begin_list)
 {
-	if (begin_list == 0)
-		return (0);
-	else
-		return (1 + ft_list_size(begin_list->next));
-}
-
-
-//orrr
-
-int	ft_list_size(t_list *begin_list)
-{
 	int i;
 
 	i = 0;
@@ -39,6 +28,20 @@ int	ft_list_size(t_list *begin_list)
 		begin_list = begin_list->next;
 	}
 	return (i);
+}
+
+
+
+
+
+//orrr
+
+int	ft_list_size(t_list *begin_list)
+{
+	if (begin_list == 0)
+		return (0);
+	else
+		return (1 + ft_list_size(begin_list->next));
 }
 
 /* write a function that returns the number of elements in the linked list that's
