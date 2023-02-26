@@ -6,9 +6,8 @@ int		ft_atoi(char *str)
 
 	while (*str >= '0' && *str <= '9')
 	{
-		n *= 10;
-		n += *str - '0';
-		++str;
+		n = n * 10 + *str - 48;
+		str++;
 	}
 	return (n);
 }
@@ -48,11 +47,11 @@ int		add_prime_sum(int n)
 	return (sum);
 }
 
-int		main(int argc, char **argv)
+int		main(int ac, char **av)
 {
 	int n;
 
-	if (argc == 2 && (n = ft_atoi(argv[1])))
+	if (ac == 2 && (n = ft_atoi(av[1])))
 		ft_putnbr(add_prime_sum(n));
 	else
 		ft_putnbr(0);
