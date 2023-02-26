@@ -39,10 +39,10 @@ void	fprime(char *str)
 	}
 }
 
-int		main(int argc, char **argv)
+int		main(int ac, char **av)
 {
-	if (argc == 2)
-		fprime(argv[1]);
+	if (ac == 2)
+		fprime(av[1]);
 
 	printf("\n");
 	return (0);
