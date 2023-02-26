@@ -18,7 +18,7 @@ int main(int ac, char **av)
 				if (av[1][i] == av[2][b])
 				{
 					check++;
-					break;
+					break; /* goes back behind previous while (while av[1][i] then i++ */
 				}
 				b++;
 			}
