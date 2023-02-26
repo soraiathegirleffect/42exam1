@@ -1,3 +1,18 @@
+ft_list.h
+
+#ifndef FT_LIST_H
+# define FT_LIST_H
+
+typedef struct s_list
+{
+	struct s_list	*next;
+	void			*data;
+}				t_list;
+
+#endif
+
+
+
 #include "ft_list.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,6 +25,21 @@ int	ft_list_size(t_list *begin_list)
 		return (1 + ft_list_size(begin_list->next));
 }
 
+
+//orrr
+
+int	ft_list_size(t_list *begin_list)
+{
+	int i;
+
+	i = 0;
+	while (begin_list)
+	{
+		i++;
+		begin_list = begin_list->next;
+	}
+	return (i);
+}
 
 /* write a function that returns the number of elements in the linked list that's
 passed to it.
@@ -24,15 +54,3 @@ typedef struct    s_list
 }                 t_list;
 */
 
-ft_list.h
-
-#ifndef FT_LIST_H
-# define FT_LIST_H
-
-typedef struct s_list
-{
-	struct s_list	*next;
-	void			*data;
-}				t_list;
-
-#endif
