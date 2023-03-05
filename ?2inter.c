@@ -60,3 +60,44 @@ $>./inter "rien" "cette phrase ne cache rien" | cat -e
 rien$
 $>./inter | cat -e
 $*/
+
+
+// orrrrrrr
+#include <unistd.h>
+
+int	check_doubles(char *s1, char c, int i)
+{
+	i--;
+	while (i >= 0)
+	{
+		if (s1[i] == c)
+			return 1;
+		i--;
+	}
+	return 0;
+}
+
+int main(int ac, char **av)
+{
+	int i;
+	int b;
+
+	if (ac == 3)
+	{
+		while (av[1][i])
+		{
+			while (av[2][b])
+			{
+				if (av[1][i] == av[2][b] && !check_doubles(av[1], av[1][i], i))
+				{
+					write (1, &av[1][i], 1);
+					break;
+				}
+				b++;
+			}
+			i++;
+			b = 0;
+		}
+	}
+	write (1, "\n", 1);
+}
