@@ -10,6 +10,25 @@ void	ft_wn(int nr)
 	write(1, &c, 1);
 }
 
+
+//orrr void    ft_printnumbers(int i)
+{
+    char c;
+
+    if (i > 9)
+    {
+        ft_printnumbers(i / 10);
+        ft_printnumbers(i % 10);
+    }
+    else
+    {
+        c = 48 + i;
+        write (1, &c, 1);
+    }
+}
+////
+
+
 int	main(void)
 {
 	int	number;
